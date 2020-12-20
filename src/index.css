@@ -1,7 +1,7 @@
 main {
   margin: 0 auto;
   max-width: 100%;
-  padding: 50px 30px;
+  padding: 20px 20px;
   /* background-color: var(--primary); */
 }
 :root {
@@ -75,7 +75,7 @@ h6 {
 p {
   font-size: 1.1rem;
   margin-top: 0;
-  color: #912f40;
+  color: var(--dark);
   padding: 20px;
 }
 
