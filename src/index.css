@@ -223,3 +223,7 @@ textarea {
   padding-bottom: var(--spacing-two);
 }
 
+.small-headshot {
+  padding: 10px;
+  border-radius: 50px
+}

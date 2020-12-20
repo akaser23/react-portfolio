@@ -1,50 +1,64 @@
-import React from 'react';
+import React, { useState } from 'react';
+import headshot from "../../assets/img/headshot-sm.jpg";
+import About from '../pages/About';
+import Portfolio from '../pages/Portfolio';
+import Contact from '../pages/Contact';
+import Resume from '../pages/Resume';
 
 function Nav(props) {
-   
+
+    const tabs = ['About Me', 'Portfolio', 'Contact', 'Resume'];
+    const [currentPage, handlePageChange] = useState('About');
+
+    const renderPage = () => {
+        switch (currentPage) {
+            case 'About':
+                return <About />;
+            case 'Portfolio':
+                return <Portfolio />;
+            case 'Contact':
+                return <Contact />;
+            case 'Resume':
+                return <Resume />;
+            default:
+                return <About />;
+        }
+    };
+
     return (
         <header className="flex-row px-1">
-            <h2>
+            <h2 className="name">
                 <a href="/">
+                    <img className="small-headshot" src={headshot} />
                     Anna Kaser
-                </a>
+                    </a>
             </h2>
             <nav>
-                <ul className="flex-row">
-                    <li className="mx-2">
-                        <a href="#about" onClick="">
-                            About Me
-                        </a>
-                    </li>
-                    <li className="mx-2">
-                        <a href="#portfolio" onClick="">
-                            Portfolio
-                        </a>
-                    </li>
-                    <li className="mx-2">
-                        <a href="#contact" onClick="">
-                            Contact
-                        </a>
-                    </li>
-                    <li className="mx-2">
-                        <a href="#resume" onClick="">
-                            Resume
-                        </a>
-                    </li>
+                <ul className="nav nav-tabs flex-row">
+                    {tabs.map(tab => (
+                        <li className="nav-item mx-2" key={tab}>
+                            <a
+                                href={'#' + tab.toLowerCase()}
+                                // Whenever a tab is clicked on,
+                                // the current page is set through the handlePageChange props.
+                                onClick={() => props.handlePageChange(tab)}
+                                className={
+                                    props.currentPage === tab ? 'nav-link active' : 'nav-link'
+                                }
+                            >
+                                {tab}
+                            </a>
+                        </li>
+                    ))}
                 </ul>
             </nav>
         </header>
+        
+        <div>
+                <div>{renderPage(currentPage)}</div>
+        </div>
+    
     )
 }
-
-{/* <section>
-<h1>A Bit About Me</h1>
-<img src={coverImage} alt="cover"/>
-<div>
-    <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum turpis sed ex condimentum molestie. Mauris condimentum lectus ut ornare dignissim. Mauris faucibus urna mi, ac feugiat metus aliquam maximus. Proin aliquam justo nec diam vulputate vestibulum. Aenean sollicitudin nulla at nisi ornare, nec suscipit massa eleifend. Morbi tristique justo vel turpis sollicitudin, et tristique velit convallis. In hac habitasse platea dictumst. Phasellus mattis nunc sed orci consequat laoreet. Praesent id nisl nibh. Curabitur imperdiet ultricies mollis. In hac habitasse platea dictumst.
-    </p>
-</div>
-</section> */}
 
 export default Nav;
