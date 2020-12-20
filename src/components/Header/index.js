@@ -7,7 +7,7 @@ import Resume from '../pages/Resume';
 
 function Header() {
 
-    const [currentPage, handlePageChange] = useState('About me');
+    const [currentPage, handlePageChange] = useState('About Me');
 
     const renderPage = () => {
         switch (currentPage) {

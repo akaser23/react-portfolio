@@ -2,6 +2,7 @@ import React from 'react';
 import coverImage from "../../assets/img/headshot.jpg";
 
 const About = () => (
+    
     <section>
         <h1>A Bit About Me</h1>
         <img src={coverImage} alt="cover" />
