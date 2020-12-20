@@ -26,38 +26,39 @@ function Nav(props) {
     };
 
     return (
-        <header className="flex-row px-1">
-            <h2 className="name">
-                <a href="/">
-                    <img className="small-headshot" src={headshot} />
+        <body>
+            <header className="flex-row px-1">
+                <h2 className="name">
+                    <a href="/">
+                        <img className="small-headshot" src={headshot} />
                     Anna Kaser
                     </a>
-            </h2>
-            <nav>
-                <ul className="nav nav-tabs flex-row">
-                    {tabs.map(tab => (
-                        <li className="nav-item mx-2" key={tab}>
-                            <a
-                                href={'#' + tab.toLowerCase()}
-                                // Whenever a tab is clicked on,
-                                // the current page is set through the handlePageChange props.
-                                onClick={() => props.handlePageChange(tab)}
-                                className={
-                                    props.currentPage === tab ? 'nav-link active' : 'nav-link'
-                                }
-                            >
-                                {tab}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-            </nav>
-        </header>
-        
-        <div>
+                </h2>
+                <nav>
+                    <ul className="nav nav-tabs flex-row">
+                        {tabs.map(tab => (
+                            <li className="nav-item mx-2" key={tab}>
+                                <a
+                                    href={'#' + tab.toLowerCase()}
+                                    // Whenever a tab is clicked on,
+                                    // the current page is set through the handlePageChange props.
+                                    onClick={() => props.handlePageChange(tab)}
+                                    className={
+                                        props.currentPage === tab ? 'nav-link active' : 'nav-link'
+                                    }
+                                >
+                                    {tab}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+            </header>
+
+            <div>
                 <div>{renderPage(currentPage)}</div>
-        </div>
-    
+            </div>
+        </body>
     )
 }
 
