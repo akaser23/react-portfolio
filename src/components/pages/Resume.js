@@ -5,10 +5,8 @@ function Resume() {
 
     return (
         <section>
-            <h1>
-                <a href={resume}>
-                    Resume
-            </a>
+            <h1 >
+                <a className="page-title" href={resume}>Resume</a>
             </h1>
             <h2>
                 Skills and Proficiencies

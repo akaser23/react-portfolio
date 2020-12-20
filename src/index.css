@@ -1,7 +1,8 @@
 main {
   margin: 0 auto;
-  max-width: 90%;
+  max-width: 100%;
   padding: 50px 30px;
+  /* background-color: var(--primary); */
 }
 :root {
   --primary: #702632;
@@ -43,6 +44,8 @@ h6 {
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
+  color: var(--primary);
+  padding: 20px;
 }
 
 h1 {
@@ -72,6 +75,8 @@ h6 {
 p {
   font-size: 1.1rem;
   margin-top: 0;
+  color: #912f40;
+  padding: 20px;
 }
 
 a {
@@ -80,16 +85,24 @@ a {
   font-weight: bold;
 }
 
+.social-links {
+  text-align: center;
+}
+
 a:hover {
   text-decoration: underline;
 }
 
-header {
+.navigation {
   background: var(--primary);
 }
 
 header a {
   color: var(--light);
+}
+
+.page-content {
+  color: #fffffa;
 }
 
 button {
@@ -123,6 +136,7 @@ span[role="img"] {
 
 form {
   width: 40%;
+  padding: 20px;
 }
 
 input {
@@ -149,6 +163,7 @@ nav a:hover {
 
 nav  li {
   cursor: pointer;
+  padding: 10px;
 }
 
 textarea {
@@ -225,7 +240,14 @@ textarea {
 
 .small-headshot {
   padding: 10px;
-  border-radius: 50px
+  border-radius: 50px;
+  margin-bottom: -30px;
+}
+
+.large-headshot {
+  padding: 20px;
+  border-radius: 100px;
+  max-width: 200px;
 }
 
 .img-thumbnail {
@@ -233,6 +255,7 @@ textarea {
   height: 200px;
   margin-bottom: 50px;
   cursor: pointer;
+  padding: 20px;
 }
 
 button {
@@ -259,4 +282,21 @@ a {
 
 .navActive {
   color: var(--secondary);
+}
+
+.nav-items {
+  margin-left: auto;
+}
+
+.page-title {
+  padding: 20px;
+  color: #702632;
+}
+
+#contact-form {
+  color: #912f40;
+}
+
+.about-title {
+  margin-top: 55px;
 }

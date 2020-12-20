@@ -26,8 +26,8 @@ function Header() {
 
     return (
         <header>
-            <Nav currentpage={currentPage} handlePageChange={handlePageChange}></Nav>
-            <div>{renderPage(currentPage)}</div>
+            <Nav classname="header" currentpage={currentPage} handlePageChange={handlePageChange}></Nav>
+            <div className="page-content">{renderPage(currentPage)}</div>
         </header>
     )
 }

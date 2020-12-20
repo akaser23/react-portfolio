@@ -7,15 +7,15 @@ function Nav(props) {
     const tabs = ['About Me', 'Portfolio', 'Contact', 'Resume'];
 
     return (
-        <main>
+        <main className="navigation">
             <header className="flex-row px-1">
                 <h2 className="name">
+                    <img href="/" className="small-headshot" src={headshot} alt="Anna Kaser" />
                     <a href="/">
-                        <img className="small-headshot" src={headshot} alt="Anna Kaser" />
-                    Anna Kaser
+                        Anna Kaser
                     </a>
                 </h2>
-                <nav>
+                <nav className="nav-items">
                     <ul className="nav nav-tabs flex-row">
                         {tabs.map(tab => (
                             <li className="nav-item mx-2" key={tab}>

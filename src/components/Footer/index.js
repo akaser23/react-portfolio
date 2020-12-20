@@ -7,8 +7,9 @@ function Footer() {
 
     return (
         <footer>
-            <a href="https://github.com/akaser23">
-                <img src={githubImage} alt="github-logo"/>
+            <div className="social-links">
+            <a href="https://github.com/akaser23" >
+                <img src={githubImage} alt="github-logo" />
             </a>
             <a href="https://www.linkedin.com/in/anna-kaser-986970165/">
                 <img src={linkedinImage} alt="linkedIn-logo"/>
@@ -16,6 +17,7 @@ function Footer() {
             <a href="https://stackoverflow.com/users/13966532/akaser23?tab=profile">
                 <img src={stackoverflowImage} alt="stackoverflow-logo"/>
             </a>
+            </div>
         </footer>
     )
 }

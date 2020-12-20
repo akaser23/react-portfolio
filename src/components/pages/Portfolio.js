@@ -4,7 +4,7 @@ import Project from '../Project';
 function Portfolio() {
     return (
         <div>
-            <h1>
+            <h1 className="page-title">
                 Portfolio
             </h1>
             <Project/>
