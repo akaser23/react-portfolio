@@ -1,11 +1,33 @@
 import React, { useState } from 'react'
-import Nav from '../Nav'
+import Nav from '../Nav';
+import About from '../pages/About';
+import Portfolio from '../pages/Portfolio';
+import Contact from '../pages/Contact';
+import Resume from '../pages/Resume';
 
 function Header() {
 
+    const [currentPage, handlePageChange] = useState('About me');
+
+    const renderPage = () => {
+        switch (currentPage) {
+            case 'About':
+                return <About />;
+            case 'Portfolio':
+                return <Portfolio />;
+            case 'Contact':
+                return <Contact />;
+            case 'Resume':
+                return <Resume />;
+            default:
+                return <About />;
+        }
+    };
+
     return (
         <header>
-            <Nav></Nav>
+            <Nav currentpage={currentPage} handlePageChange={handlePageChange}></Nav>
+            <div>{renderPage(currentPage)}</div>
         </header>
     )
 }
