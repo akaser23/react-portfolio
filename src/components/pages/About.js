@@ -10,7 +10,12 @@ const About = () => (
         </div>
         <div>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum turpis sed ex condimentum molestie. Mauris condimentum lectus ut ornare dignissim. Mauris faucibus urna mi, ac feugiat metus aliquam maximus. Proin aliquam justo nec diam vulputate vestibulum. Aenean sollicitudin nulla at nisi ornare, nec suscipit massa eleifend. Morbi tristique justo vel turpis sollicitudin, et tristique velit convallis. In hac habitasse platea dictumst. Phasellus mattis nunc sed orci consequat laoreet. Praesent id nisl nibh. Curabitur imperdiet ultricies mollis. In hac habitasse platea dictumst.
+                Welcome to my site!<br/>
+                <br/>
+                After graduating with a B.A. in English in 3 quick years at the University of Utah, I took on a job as a Marketing Assistant at Salt Lake City Weekly. In this position, I learned a lot about working well in stressful situations, running events for the public, and even did some content and article writing. After leaving my position at City Weekly, I took a job as a Technician at Pyromatrix Enterprises. This job has given me the attention to detail that I believe is useful in coding. In an effort to pursue more education, I enrolled in a coding bootcamp from The University of Utah. Over the past 6 months I have fell in love with a new way to express ideas and have learned so much about problem solving and my ability to work through issues.
+                <br/>
+                <br/>
+                Besides staying busy with coding, I enjoy all things outdoors. Living in Utah means that there are lots of options for outdoor fun, may favorites are skiing, camping, hiking and kayaking. I live in downtown SLC with my cat and love going to concerts and festivals in the city.
             </p>
         </div>
     </section>

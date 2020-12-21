@@ -453,3 +453,8 @@ a {
 .resume-link {
   color: var(--primary);
 }
+
+.skill-list {
+  display: inline-block;
+  width: 50%;
+}
