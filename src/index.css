@@ -424,7 +424,7 @@ a {
   margin-left: auto;
 }
 
-.page-title {
+.content {
   padding: 20px;
   color: #702632;
 }
@@ -448,4 +448,8 @@ a {
   background:var(--light);
   margin-top: 100px;
   display: inline-block;
+}
+
+.resume-link {
+  color: var(--primary);
 }

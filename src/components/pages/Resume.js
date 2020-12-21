@@ -4,9 +4,9 @@ import resume from "../../assets/docs/Anna_Kaser_-_Junior_Web_Developer.pdf";
 function Resume() {
 
     return (
-        <section>
-            <h1 >
-                <a className="page-title" href={resume}>Resume</a>
+        <section className="content">
+            <h1>
+                <a className="resume-link" href={resume}>Resume</a>
             </h1>
             <h2>
                 Skills and Proficiencies
