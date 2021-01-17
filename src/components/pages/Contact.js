@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
-
+import emailjs from 'emailjs-com';
 import { validateEmail } from '../../utils/helpers';
 
 function ContactForm() {
-  const [formState, setFormState] = useState({ name: '', email: '', message: '' });
+  const [formState] = useState({ name: '', email: '', message: '' });
 
   const [errorMessage, setErrorMessage] = useState('');
   const { name, email, message } = formState;
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!errorMessage) {
-      setFormState({ [e.target.name]: e.target.value });
-      console.log('Form', formState);
-    }
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (!errorMessage) {
+  //     setFormState({ [e.target.name]: e.target.value });
+  //     console.log('Form', formState);
+  //   }
+  // };
 
   const handleChange = (e) => {
     if (e.target.name === 'email') {
@@ -33,17 +33,29 @@ function ContactForm() {
     }
   };
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('contact_service', 'contact_form', e.target, 'user_pSq1ZsBtvUyLdwECPrnf5')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+      e.target.reset()
+  }
+
   return (
     <section>
       <h1 data-testid="h1tag" className="page-title" >Contact me</h1>
-      <form id="contact-form" onSubmit={handleSubmit}>
+      <form id="contact-form" onSubmit={sendEmail}>
         <div>
           <label htmlFor="name">Name:</label>
-          <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
+          <input type="text" name="user_name" defaultValue={name} onBlur={handleChange} />
         </div>
         <div>
           <label htmlFor="email">Email address:</label>
-          <input type="email" name="email" defaultValue={email} onBlur={handleChange} />
+          <input type="email" name="user_email" defaultValue={email} onBlur={handleChange} />
         </div>
         <div>
           <label htmlFor="message">Message:</label>
@@ -54,7 +66,7 @@ function ContactForm() {
             <p className="error-text">{errorMessage}</p>
           </div>
         )}
-        <button data-testid="button" type="submit">Submit</button>
+        <button data-testid="button" type="submit" value="Send">Submit</button>
       </form>
     </section>
   );
