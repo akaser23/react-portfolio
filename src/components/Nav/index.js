@@ -11,7 +11,7 @@ function Nav(props) {
             <header className="flex-row px-1">
                 <h2 className="name">
                     <img href="/" className="small-headshot" src={headshot} alt="Anna Kaser" />
-                    <a href="/">
+                    <a href="/react-portfolio">
                         Anna Kaser
                     </a>
                 </h2>
