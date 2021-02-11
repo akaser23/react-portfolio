@@ -35,12 +35,12 @@ function Project() {
                     </a>
                 </div>
             </div>
-            <div title="day-scheduler-gif" className="img-thumbnail-4 mx-1">
+            <div title="dinostore-gif" className="img-thumbnail-4 mx-1">
                 <div className="project-desc">
-                    <a className="project-title" href="https://akaser23.github.io/work-day-scheduler/" target="_blank" rel="noopener noreferrer">
-                        Day Planner
+                    <a className="project-title" href="https://ancient-lake-97986.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+                        Dinostore
                 </a>
-                    <a href="https://github.com/akaser23/work-day-scheduler" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/akaser23/dino-store" target="_blank" rel="noopener noreferrer">
                         <img src={githubRed} alt="github logo red" />
                     </a>
                 </div>
