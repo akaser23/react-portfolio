@@ -1,9 +1,34 @@
 import React from 'react';
-import githubRed from "../../assets/img/github-red.png"
+import githubRed from "../../assets/img/github-red.png";
+// import Card from 'react-bootstrap/Button';
+// import ListGroupItem from 'react-bootstrap/Button';
+// import ListGroup from 'react-bootstrap/Button';
 
 function Project() {
     return (
         <div className="flex-row">
+            {/* <div>
+                <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+                    <Card.Body>
+                        <Card.Title>Card Title</Card.Title>
+                        <Card.Text>
+                            Some quick example text to build on the card title and make up the bulk of
+                            the card's content.
+                    </Card.Text>
+                    </Card.Body>
+                    <ListGroup className="list-group-flush">
+                        <ListGroupItem>Cras justo odio</ListGroupItem>
+                        <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
+                        <ListGroupItem>Vestibulum at eros</ListGroupItem>
+                    </ListGroup>
+                    <Card.Body>
+                        <Card.Link href="#">Card Link</Card.Link>
+                        <Card.Link href="#">Another Link</Card.Link>
+                    </Card.Body>
+                </Card>
+            </div> */}
+
             <div title="Mood-Music-Gif" className="img-thumbnail-1 mx-1">
                 <div className="project-desc">
                     <a className="project-title" href="https://akaser23.github.io/music-mood/" target="_blank" rel="noopener noreferrer">
@@ -13,7 +38,6 @@ function Project() {
                         <img className="github-red" src={githubRed} alt="github logo red" />
                     </a>
                 </div>
-
             </div>
             <div title="Holiday-Planner-Screen" className="img-thumbnail-2 mx-1">
                 <div className="project-desc">
